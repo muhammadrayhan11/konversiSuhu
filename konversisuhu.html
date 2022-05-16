@@ -1,0 +1,358 @@
+<html>
+
+<head>
+    <title>Konversi Suhu</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #3d3d3d;
+        }
+        
+        .Celcius {
+            border-radius: 15px;
+            border-color: black;
+            box-shadow: 5px 5px 5px #333;
+            background-color: #17223a;
+        }
+        
+        .Farenheit {
+            border-radius: 15px;
+            border-color: black;
+            box-shadow: 5px 5px 5px #333;
+            background-color: #17223a;
+        }
+        
+        .Kelvin {
+            border-radius: 15px;
+            border-color: black;
+            box-shadow: 5px 5px 5px #333;
+            background-color: #17223a;
+        }
+        
+        .Reamur {
+            border-radius: 15px;
+            border-color: black;
+            box-shadow: 5px 5px 5px #333;
+            background-color: #17223a;
+        }
+        
+        input {
+            border-radius: 50px;
+        }
+        
+        .suhu {
+            border-radius: 10px;
+            border-color: black;
+            box-shadow: 5px 5px 5px #333;
+            background-color: #17223a;
+        }
+        
+        legend {
+            text-align: center;
+        }
+    </style>
+    <script>
+        //Celcius - Farenheit
+        function cf(valnum1) {
+            valnum1 = parseFloat(valnum1);
+            document.getElementById("opt_cf").innerHTML = (valnum1 * 9 / 5) + 32;
+        }
+        //Celcius - Kelvin
+        function ck(valnum2) {
+            valnum2 = parseFloat(valnum2);
+            document.getElementById("opt_ck").innerHTML = valnum2 + 273.15;
+        }
+        //Celcius - reamur
+        function cr(valnum3) {
+            valnum3 = parseFloat(valnum3);
+            document.getElementById("opt_cr").innerHTML = valnum3 * 0.8;
+        }
+        //Fareheit - Celcius
+        function fc(valnum4) {
+            valnum4 = parseFloat(valnum4);
+            document.getElementById("opt_fc").innerHTML = (valnum4 - 32) * 0.5555555555555556;
+        }
+        //Farenheit - Kelvin
+        function fk(valnum5) {
+            valnum5 = parseFloat(valnum5);
+            document.getElementById("opt_fk").innerHTML = (valnum5 + 459.47) * 0.5555555555555556;
+        }
+        //Farenheit - Reamur
+        function fr(valnum6) {
+            valnum6 = parseFloat(valnum6);
+            document.getElementById("opt_fr").innerHTML = 0.5 * (valnum6 - 32);
+        }
+        //Kelvin - Celcius
+        function kc(valnum7) {
+            valnum7 = parseFloat(valnum7);
+            document.getElementById("opt_kc").innerHTML = (valnum7 - 273.5);
+        }
+        //Kelvin - Farenheit
+        function kf(valnum8) {
+            valnum8 = parseFloat(valnum8);
+            document.getElementById("opt_kf").innerHTML = (valnum8 * 1.8) + 459.67;
+        }
+        //Kelvin - Reamur
+        function kr(valnum9) {
+            valnum9 = parseFloat(valnum9);
+            document.getElementById("opt_kr").innerHTML = 0.8 * (valnum9 + 273.15);
+        }
+        //Reamur - Celcius
+        function rc(valnum10) {
+            valnum10 = parseFloat(valnum10);
+            document.getElementById("opt_rc").innerHTML = valnum10 * 1.25;
+        }
+        //Reamur - Farenheit
+        function rf(valnum11) {
+            valnum11 = parseFloat(valnum11);
+            document.getElementById("opt_rf").innerHTML = (valnum11 * 2.25) + 32;
+        }
+        //Reamur - Kelvin
+        function rk(valnum12) {
+            valnum12 = parseFloat(valnum12);
+            document.getElementById("opt_rk").innerHTML = (valnum12 * 1.25) + 273.15;
+        }
+    </script>
+    <center>
+        <h1 class="suhu" style="font-size: 40px;">Konversi Suhu</h1>
+    </center>
+    <fieldset class="Celcius">
+        <legend style="font-size: 25px;"><b>Celcius</b></legend>
+        <table>
+            <div class="C-F">
+                <tbody>
+                    <tr>
+                        <li>Masukan Celcius</li>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="inputcf" oninput="cf(this.value)" onchange="cf(this.value)" placeholder="Celcius"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Farenheit: <span id="opt_cf"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="C-K">
+                <tbody>
+                    <tr>
+                        <li>Masukan Celcius</li>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="inputck" oninput="ck(this.value)" onchange="ck(this.value)" placeholder="Celcius"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Kelvin: <span id="opt_ck"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="C-R">
+                <tbody>
+                    <tr>
+                        <li>Masukan Celcius</li>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="inputcr" oninput="cr(this.value)" onchange="cr(this.value)" placeholder="Celcius"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Reamur: <span id="opt_cr"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+    </fieldset><br>
+    <fieldset class="Farenheit">
+        <legend style="font-size: 25px;"><b>Farenheit</b></legend>
+        <table>
+            <div class="F-C">
+                <tbody>
+                    <tr>
+                        <li>Masukan Farenheit</li>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="inputfc" oninput="fc(this.value)" onchange="fc(this.value)" placeholder="Farenheit"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Celcius: <span id="opt_fc"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div>
+                <tbody>
+                    <tr>
+                        <li>Masukan Farenheit</li>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="inputfk" oninput="fk(this.value)" onchange="fk(this.value)" placeholder="Farenheit"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Kelvin: <span id="opt_fk"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="Fr">
+                <tbody>
+                    <tr>
+                        <li>Masukan Farenheit</li>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="inputfr" oninput="fr(this.value)" onchange="fr(tjis.value)" placeholder="Farenheit"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Reamur: <span id="opt_fr"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+    </fieldset><br>
+    <fieldset class="kelvin">
+        <legend style="font-size: 25px;"><b>Kelvin</b></legend>
+        <table>
+            <div class="Kc">
+                <tbody>
+                    <tr>
+                        <li>Masukan Kelvin</li>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="inputkc" oninput="kc(this.value)" onchange="kc(this.value)" placeholder="Kelvin">
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Celcius: <span id="opt_kc"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="kf">
+                <tbody>
+                    <tr>
+                        <li>Masukan Kelvin</li>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="inputkf" oninput="kf(this.value)" onchange="kf(this.value)" placeholder="Kelvin">
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Farenheit: <span id="opt_kf"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="kr">
+                <tbody>
+                    <tr>
+                        <li>Masukan Kelvin</li>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="inputkr" oninput="kr(this.value)" onchange="kr(this.value)" placeholder="Kelvin">
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Reamur: <span id="opt_kr"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+    </fieldset><br>
+    <fieldset class="Reamur">
+        <legend style="font-size: 25px;"><b>Reamur</b></legend>
+        <table>
+            <div class="rc">
+                <tbody>
+                    <tr>
+                        <li>Masukan Reamur</li>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="inputrc" oninput="rc(this.value)" onchange="rc(this.value)" placeholder="Reamur">
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Celcius: <span id="opt_rc"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="rc">
+                <tbody>
+                    <tr>
+                        <li>Masukan Reamur</li>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="inputrf" oninput="rf(this.value)" onchange="rf(this.value)" placeholder="Reamur">
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Farenheit: <span id="opt_rf"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+        <table>
+            <div class="rk">
+                <tbody>
+                    <tr>
+                        <li>Masukan Reamur</li>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="inputrk" oninput="rk(this.value)" onchange="rk(this.value)" placeholder="Reamur">
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Kelvin: <span id="opt_rk"></span></td>
+                    </tr>
+                </tfoot>
+            </div>
+        </table>
+    </fieldset>
+    <hr>
+    <div class="font">
+        <center>
+            <p style="font-size: 20px;"><u>Muhammad Rayhan Zamzami XRPL2 08</u></p>
+        </center>
+    </div>
+    <hr/>
+</body>
+
+</html>
